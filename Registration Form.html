@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style type="text/css">
+        .abc
+        {
+          
+            color:green;
+            text-decoration: underline;
+            text-shadow: 2cm;
+        }
+        .head{
+            font-family: 'Trebuchet MS';
+            color: green;
+            text-decoration: underline;
+
+        }
+    </style>
+</head>
+<body>
+    <div align="center">
+        <h1 class="head"> Registration Form</h1>
+        <form method ="post" action="">
+            <input type="text" placeholder="Enter your name" size="25" id="nm">
+            <br><br>
+            <input type="text" placeholder="M/F/TG" sixe="6" id="sex">
+            <br><br>
+            <input type="number" placeholder="Enter your age" size="3" id="age" maxlength="2">
+            <br><br>
+            <input type="email" placeholder="Enter your email" size="25" id="email">
+            <br><br>
+            <input type="button" value="Register" onclick="userdetails()" >
+
+        </form>
+    <div id="data" class ="abc"></div>
+    <script type="text/javascript">
+    function userdetails()
+    {
+        var userName = document.getElementById('nm').value;
+        var userAge = document.getElementById('age').value;
+        var userEmail = document.getElementById('email').value;
+        var userSex = document.getElementById('sex').value;
+        
+        document.getElementById('data').innerHTML = "<h1>Name: "+userName+" <br>Age:"+userAge+"<br>Email:"+userEmail+"<br>Gender: "+userSex+"</h1>";
+    }
+    </script>
+    </div>
+</body>
+</html>
