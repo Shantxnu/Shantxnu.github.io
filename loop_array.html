@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+	<title>coloring_Loop_Array</title>
+	<style type="text/css">
+		p 
+		{
+			font-size : 20px;
+		}
+	</style>	
+	</head>
+	<body>
+	<div id="output"></div>	
+		<script type="text/javascript">
+			var data = new Array();
+			var data2 = new Array();
+
+			data2 = "SBJain";
+			alert (data2[5]);
+			data[0] = " My name is ";
+			data[1] = "Shantanu S. Nagdawane ";
+			data[2] = "from mechanical department ";
+			data[3] = "currently studying in 3rd year 5th sem ";
+			data[4] = "thanks! ";
+
+			var op="";
+			var colors = new Array();
+			colors[0] = "red";
+			colors[1] = "blue";
+			colors[2] = "magenta";
+			colors[3] = "dimgrey";
+			colors[4] = "purple";
+			for(var i=0;i<=4;i++)
+			{
+						op += "<p style='color:" +colors[i]+"'>" +data[i] + "</p>";
+			}
+				document.getElementById('output').innerHTML=op;
+</script>
+
+</body>
+</html>

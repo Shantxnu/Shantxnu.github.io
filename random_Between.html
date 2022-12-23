@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript Random Between</title>
+	<style type="text/css">
+		 
+		 body
+		 {
+
+		background: #DBE6F6;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #C5796D, #DBE6F6);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #C5796D, #DBE6F6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			text-shadow: 100x 20x 45x;
+			font-family: trebuchet MS;
+			font-size: 20px;
+		
+
+		}
+
+		input
+		{
+			font-family: trebuchet MS;
+			font-size: 30px;
+		}
+		input[type=button]
+		{
+			background-color: red;
+			color: white;
+			font-family: trebuchet MS;
+		}
+		.output
+		{
+			font-family: revert-layer;
+			text-align: Center;
+			font-size: 100px;
+			font-weight: bolder;
+			color: green;
+		}
+
+	</style>
+</head>
+<body>
+
+<div align="center">
+	<h1 style="color:green; "> Random No. Generation</h1>
+	<input type="text" id="min" placeholder="Enter the  Min Number">
+	<br><br>
+	<input type="text" id="max" placeholder="Enter the  Max Number">
+	<br><br>
+	<input type="button" value="GENERATE" onclick=" random_gen()">
+</div>
+<br><br>
+	<div  id="output" class="output"></div>
+	<script type="text/javascript">
+		
+		function random_gen()
+		{
+
+
+		var min = parseInt(document.getElementById('min').value);
+
+		var max = parseInt(document.getElementById('max').value);
+
+		var randomNo= ( Math.floor (Math.random()*(max - min + 1 ))) + min; document.getElementById('output').innerHTML=randomNo;
+
+
+		}
+		
+		
+
+</script>
+
+</body>
+</html>

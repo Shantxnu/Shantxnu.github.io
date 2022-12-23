@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Math_object</title>
+	<style type="text/css">
+		body 
+		{
+			background: #C9FFBF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #FFAFBD, #C9FFBF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #FFAFBD, #C9FFBF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+		}
+	.output{
+				font-family: 'Trebuchet MS';
+			font-size: 40px;
+			color:palevioletred;
+	    	}
+</style>
+</head>
+<body>
+<h1 style="color:indigo; ">maths javaScript</h1>
+
+
+<div id="output" class="output"></div> 
+<script type="text/javascript">
+	 var pi = Math.PI;
+	 var round = Math.round(45.98);
+	 var floor = Math.floor(4.2);
+	 var min = Math.min(10,20,30,40,50,60);
+	 var max = Math.max(10,20,30,40,50,60);
+	 var truncate = Math.trunc(4.7);
+	 var power = Math.pow(2,6);
+	 var sqrt = Math.sqrt(625);
+	 var random = Math.random();
+
+
+	document.getElementById('output').innerHTML = "<i>Value of PI: "+pi+
+	" <br>"+"Round: "+round+
+	"<br>"+"Floor: "+floor+
+	"<br>"+"Min: "+min+
+	"<br>"+"Max: "+max+
+	"<br>"+"Truncate: "+truncate+
+	"<br>"+"Power: "+ power+
+	"<br>"+"Sq root: "+sqrt+
+	"<br>"+"Random:"+random;
+	 
+	 	 
+</script>
+</body>
+</html>

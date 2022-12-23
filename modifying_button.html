@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Inner HTML</title>
+	<style type="text/css">
+	body
+	{
+		background: #fffbd5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #b20a2c, #fffbd5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #b20a2c, #fffbd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	}
+</style>
+</head>
+
+<body>
+<div id="sbJain">Hello</div>
+<button onclick="abc()" id="btn">Press Here</button>
+<script type="text/javascript">
+		function abc()
+		{
+			document.getElementById('btn').innerHTML="Please wait";
+			document.getElementById('sbJain').innerHTML = "HI, how are you?";
+		}
+
+</script>
+</body>
+</html>

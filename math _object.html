@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Math_object</title>
+	<style type="text/css">
+	.output{
+				font-family: 'trebutech';
+			font-size: 40px;
+			color:palevioletred;
+	    	}
+</style>
+</head>
+<body>
+<h1>JavaScript Math Object</h1>
+<div id="output" class="output"></div> 
+<script type="text/javascript">
+	 var pi = Math.PI;
+	 var round = Math.round(15.96);
+	 var floor = Math.floor(4.1);
+	 var min = Math.min(10,20,30,40,50,60);
+	 var max = Math.min(10,20,30,40,50,60);
+	 var truncate = Math.trunc(4.7);
+	 var power = Math.pow(2,6);
+	 var sqrt = Math.sqrt(25);
+	 var random = Math.random();
+	 
+
+	document.getElementById('output').innerHTML = "<i>Value of PI: "+pi+
+	" <br>"+"Round: "+round+
+	"<br>"+"Floor: "+floor+
+	"<br>"+"Min: "+min+
+	"<br>"+"Max: "+max+
+	"<br>"+"Truncate: "+truncate+
+	"<br>"+"Power: "+ power+
+	"<br>"+"Sq root: "+sqrt+
+	"<br>"+"Random:"+random;
+	 
+
+</script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript Random Between</title>
+	<style type="text/css">
+		 
+	body {
+
+    background: #DBE6F6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #C5796D, #DBE6F6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C5796D, #DBE6F6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 80%;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  position: relative;
+  margin: 0;
+  padding: 5px 12px;
+  height: 60px;
+  width: 150px;
+  outline: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  border: 1px solid rgba(255, 0, 0, 0.6);
+  border-radius: 10px;
+  color: #FF0000;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: sans-serif;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+button span {
+  color: #FF0000;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+
+button:hover {
+  animation: rotate 0.7s ease-in-out both;
+}
+button:hover span {
+  animation: storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+.btn-slide-line.center:after {
+  left: 50%;
+}
+.btn-slide-line:after {
+  position: absolute;
+  right: 0;
+  left: auto;
+  transition: 0.3s;
+  content: '';
+  width: 0;
+  bottom: 0;
+  height: 3px;
+  background: #FF0000;
+}
+
+.btn-slide-line:hover {
+  cursor: pointer;
+}
+.btn-slide-line:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+		input
+		{
+			font-family: trebuchet MS;
+			font-size: 30px;
+		}
+		input[type=button]
+		{
+			background-color: red;
+			color: white;
+			font-family: trebuchet MS;
+		}
+		.output
+		{
+			font-family: revert-layer;
+			text-align: Center;
+			font-size: 100px;
+			font-weight: bolder;
+			color: green;
+		}
+
+	</style>
+</head>
+<body>
+
+<div align="center">
+	<h1 style="color:green; "> Random No. Generation</h1>
+	<input type="text" id="min" placeholder="Enter the  Min Number">
+	<br><br>
+	<input type="text" id="max" placeholder="Enter the  Max Number">
+	<br><br>
+	<div class="container">
+      <button class="btn-slide-line center"  onclick=" random_gen()">
+        <span>GENERATE</span>
+      </button>
+</div>
+<br><br>
+	<div  id="output" class="output"></div>
+	<script type="text/javascript">
+		
+		function random_gen()
+		{
+
+
+		var min = parseInt(document.getElementById('min').value);
+
+		var max = parseInt(document.getElementById('max').value);
+
+		var randomNo= ( Math.floor (Math.random()*(max - min + 1 ))) + min; document.getElementById('output').innerHTML=randomNo;
+
+
+		}
+		
+		
+
+</script>
+
+</body>
+</html>
